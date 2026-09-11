@@ -2,21 +2,88 @@ body {
     margin: 0 auto;
     font-family: Inter, sans-serif;
     font-weight: 500;
-    background-color: rgba(0,0,0,0.07);
+    background-color: rgba(0,0,0,0.05);
 }
 
 h1{
     font-family: Inter, sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 80px;
+    margin-bottom: 20px;
 }
 
-/* container class to set consistent widths */
+button{
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: none; /* remove annoying html stock border*/
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.1em;
+    margin-right: 30px;
+}
+
+/* make form a card*/
+#task-form{
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 28px;
+}
+
+#task-form label{
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+
+#task-input{
+    padding: 10px 15px;
+    margin-right: 20px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+#priority{
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 20px;
+}
+
+#task-list{
+    padding: 30px 30px 60px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 28px;
+
+}
+
+/* container class to set consistent widths on desktop/laptop*/
 .container{
     width: 1280px;/*set a width for the page contents*/
-    margin: 60px auto;/*set top and bottom margin to 60px and auto the left and right margins to center*/
+    margin: 60px auto;/*set top and bottom margin to 60px and auto the left and right margins to center the div*/
 }
 
-.completed {
+.task-element{
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+/* make each card a task*/
+.task-element span{
+    margin-right: 50px;
+    font-size: 26px;
+    font-weight: 700;
+
+}
+
+.completed span{/* use span to cross through center of text itself*/
     text-decoration: line-through;
+    color: green;
 }

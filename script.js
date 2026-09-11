@@ -15,13 +15,13 @@ form.addEventListener("submit", function (event){/* add event listener to form f
     if (taskName === "") {
         return;
     }
-    const task = {
+    const task = {/* make task obj*/
         name: taskName,
         priority: taskPriority,
         completed: false
     };
-    tasks.push(task);
-    displayTasks();
+    tasks.push(task);/* add the task to array*/
+    displayTasks();/* update tasks in dom*/
 });
 
 function displayTasks(){
@@ -31,6 +31,7 @@ function displayTasks(){
         const task = tasks[i];/*grab task obj w/ index of loop from array of tasks*/
 
         const taskElement = document.createElement("div");/*make div for the task*/
+        taskElement.classList.add("task-element");/* add class to style and avoid id collision*/
         if (task.completed){
             taskElement.classList.add("completed");/* add css class to style a completed task*/
         }
@@ -47,7 +48,12 @@ function displayTasks(){
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "delete task";
+        deleteButton.addEventListener("click", function(){
+            tasks.splice(i, 1); /* delete one item at i*/
+            displayTasks();/* update*/
+        });
 
+        /*put each of the children in the taskElement, then add the element to the list*/
         taskElement.appendChild(taskText);
         taskElement.appendChild(completeButton);
         taskElement.appendChild(deleteButton);
