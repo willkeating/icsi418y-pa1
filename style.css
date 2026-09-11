@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    background-color: rgba(0,0,0,0.07);
+}
+
+h1{
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* container class to set consistent widths */
+.container{
+    width: 1280px;/*set a width for the page contents*/
+    margin: 60px auto;/*set top and bottom margin to 60px and auto the left and right margins to center*/
+}
+
+.completed {
+    text-decoration: line-through;
+}
