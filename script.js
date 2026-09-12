@@ -8,7 +8,8 @@ const taskList = document.querySelector("#task-list");//""
 const tasks= [];/* make empty array, "tasks"*/
 
 form.addEventListener("submit", function (event){/* add event listener to form for submit*/
-    event.preventDefault();
+    event.preventDefault();/* normal form handling not needed and we lose tasks on refresh*/
+
     const taskName = taskInput.value;
     const taskPriority = priorityInput.value;
 
